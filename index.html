@@ -9,24 +9,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#07111f;--panel:#0c1728;--panel2:#10203a;--text:#e8eef8;--muted:#a9b8d2;--line:rgba(255,255,255,.08);--accent:#57a6ff;--accent2:#67e8f9;--shadow:0 24px 60px rgba(0,0,0,.35)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at top,#10264a 0%,#07111f 45%,#050b14 100%);color:var(--text)}a{color:inherit;text-decoration:none}
+    :root{
+      --bg:#07111f;
+      --panel:#0c1728;
+      --panel2:#10203a;
+      --text:#e8eef8;
+      --muted:#a9b8d2;
+      --line:rgba(255,255,255,.08);
+      --accent:#57a6ff;
+      --accent2:#67e8f9;
+      --shadow:0 24px 60px rgba(0,0,0,.35)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      background:radial-gradient(circle at top,#10264a 0%,#07111f 45%,#050b14 100%);
+      color:var(--text)
+    }
+    a{color:inherit;text-decoration:none}
     .wrap{max-width:1180px;margin:0 auto;padding:24px}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;position:sticky;top:0;backdrop-filter:blur(14px);background:linear-gradient(to bottom,rgba(7,17,31,.88),rgba(7,17,31,.25));z-index:10;border-bottom:1px solid transparent}
-    .brand{font-weight:800;letter-spacing:.3px}.navlinks{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-    .hero{display:grid;grid-template-columns:1.3fr .9fr;gap:24px;align-items:stretch;padding:34px 0 18px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
-    .heroMain{padding:34px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(87,166,255,.14);color:#b9d7ff;font-size:13px;border:1px solid rgba(87,166,255,.22)}
-    h1{margin:18px 0 10px;font-size:clamp(38px,6vw,64px);line-height:1.02}.lead{font-size:18px;color:var(--muted);max-width:62ch;line-height:1.7}
-    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{padding:12px 18px;border-radius:14px;font-weight:600;border:1px solid var(--line);background:rgba(255,255,255,.04)}.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04101f;border:none}
-    .heroSide{padding:24px;display:grid;gap:14px}.stat{padding:18px;border-radius:18px;background:rgba(8,15,28,.55);border:1px solid var(--line)}.stat b{display:block;font-size:22px;margin-bottom:4px}.stat span{color:var(--muted);font-size:14px}
-    section{padding:22px 0}.sectionTitle{font-size:26px;margin:0 0 14px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .panel{padding:24px}.about{grid-column:span 7}.skills{grid-column:span 5}.exp,.projects,.edu,.cert{grid-column:span 12}
-    .pillwrap{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:10px 14px;border-radius:999px;background:rgba(87,166,255,.12);border:1px solid rgba(87,166,255,.18);color:#d7e8ff;font-size:14px}
-    .item{padding:18px 0;border-top:1px solid var(--line)}.item:first-child{border-top:none;padding-top:0}.item h3{margin:0 0 6px}.meta{color:#8fa3c1;font-size:14px;margin-bottom:10px}.item ul{margin:0;padding-left:18px;color:var(--text)}.item li{margin:8px 0;line-height:1.6;color:#d9e4f4}
-    .projGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.proj{padding:20px;border-radius:20px;background:linear-gradient(180deg,rgba(16,32,58,.95),rgba(10,18,34,.92));border:1px solid var(--line)}.proj h3{margin:0 0 10px}.proj p{color:var(--muted);line-height:1.7;margin:0}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 0;position:sticky;top:0;backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom,rgba(7,17,31,.88),rgba(7,17,31,.25));
+      z-index:10;border-bottom:1px solid transparent
+    }
+    .brand{font-weight:800;letter-spacing:.3px}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .hero{
+      display:grid;grid-template-columns:1.3fr .9fr;gap:24px;align-items:stretch;padding:34px 0 18px
+    }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)
+    }
+    .heroMain{padding:34px}
+    .eyebrow{
+      display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;
+      background:rgba(87,166,255,.14);color:#b9d7ff;font-size:13px;border:1px solid rgba(87,166,255,.22)
+    }
+    h1{margin:18px 0 10px;font-size:clamp(38px,6vw,64px);line-height:1.02}
+    .lead{font-size:18px;color:var(--muted);max-width:62ch;line-height:1.7}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{
+      padding:12px 18px;border-radius:14px;font-weight:600;border:1px solid var(--line);
+      background:rgba(255,255,255,.04)
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#04101f;border:none
+    }
+    .heroSide{padding:24px;display:grid;gap:14px}
+    .stat{
+      padding:18px;border-radius:18px;background:rgba(8,15,28,.55);border:1px solid var(--line)
+    }
+    .stat b{display:block;font-size:22px;margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:14px}
+    section{padding:22px 0}
+    .sectionTitle{font-size:26px;margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .panel{padding:24px}
+    .about{grid-column:span 7}
+    .skills{grid-column:span 5}
+    .exp,.projects,.edu,.cert{grid-column:span 12}
+    .pillwrap{display:flex;flex-wrap:wrap;gap:10px}
+    .pill{
+      padding:10px 14px;border-radius:999px;background:rgba(87,166,255,.12);
+      border:1px solid rgba(87,166,255,.18);color:#d7e8ff;font-size:14px
+    }
+    .item{padding:18px 0;border-top:1px solid var(--line)}
+    .item:first-child{border-top:none;padding-top:0}
+    .item h3{margin:0 0 6px}
+    .meta{color:#8fa3c1;font-size:14px;margin-bottom:10px}
+    .item ul{margin:0;padding-left:18px;color:var(--text)}
+    .item li{margin:8px 0;line-height:1.6;color:#d9e4f4}
+    .projGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .proj{
+      padding:20px;border-radius:20px;
+      background:linear-gradient(180deg,rgba(16,32,58,.95),rgba(10,18,34,.92));
+      border:1px solid var(--line)
+    }
+    .proj h3{margin:0 0 10px}
+    .proj p{color:var(--muted);line-height:1.7;margin:0}
     .footer{padding:28px 0 10px;color:#8ba0be;font-size:14px;text-align:center}
-    @media (max-width:900px){.hero,.projGrid,.about,.skills{grid-template-columns:1fr}.about,.skills{grid-column:span 12}.projGrid{grid-template-columns:1fr}.nav{gap:10px;flex-direction:column;align-items:flex-start}}
+    @media (max-width:900px){
+      .hero,.projGrid,.about,.skills{grid-template-columns:1fr}
+      .about,.skills{grid-column:span 12}
+      .projGrid{grid-template-columns:1fr}
+      .nav{gap:10px;flex-direction:column;align-items:flex-start}
+    }
   </style>
 </head>
 <body>
@@ -34,102 +107,167 @@
     <header class="nav">
       <div class="brand">Sai Kurra</div>
       <nav class="navlinks">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main class="hero">
       <div class="card heroMain">
-        <div class="eyebrow">DevOps Engineer • Cloud Security • CI/CD Automation</div>
-        <h1>Building secure, reliable cloud systems that ship faster.</h1>
-        <p class="lead">DevOps Engineer with 3+ years of experience designing CI/CD pipelines, automating infrastructure as code, and improving reliability across Azure and AWS environments. I focus on observability, security, incident response, and delivery speed.</p>
+        <div class="eyebrow">DevOps Engineer • Cloud Infrastructure • CI/CD Automation</div>
+        <h1>Building secure, scalable cloud systems that ship faster.</h1>
+        <p class="lead">
+          DevOps Engineer with 3+ years of experience designing and managing scalable cloud infrastructure and CI/CD pipelines for cloud-native applications.
+          Hands-on expertise in AWS and Azure, infrastructure as code, and containerized deployments using Docker and Kubernetes.
+        </p>
         <div class="btns">
           <a class="btn primary" href="mailto:saikurra982@gmail.com">Email Me</a>
           <a class="btn" href="https://www.linkedin.com/in/saikurra01/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="https://saikurra18.github.io/portfolio/" target="_blank" rel="noreferrer">Portfolio</a>
         </div>
       </div>
+
       <aside class="card heroSide">
-        <aside class="card heroSide">
-  <img src="profile.jpg" alt="Sai Kurra photo" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin:0 auto 8px;display:block;border:3px solid rgba(255,255,255,.15);" />
-  <div class="stat"><b>3+ Years</b><span>DevOps, cloud, and support engineering experience</span></div>
-        <div class="stat"><b>3+ Years</b><span>DevOps, cloud, and support engineering experience</span></div>
+        <img src="profile.jpg" alt="Sai Kurra photo" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin:0 auto 8px;display:block;border:3px solid rgba(255,255,255,.15);" />
+        <div class="stat"><b>3+ Years</b><span>DevOps, cloud engineering, and support experience</span></div>
         <div class="stat"><b>AWS + Azure</b><span>CI/CD, IaC, monitoring, networking, and security</span></div>
-        <div class="stat"><b>Houston, TX</b><span>Open to DevOps and cloud engineering roles</span></div>
+        <div class="stat"><b>San Francisco, CA</b><span>Open to DevOps and cloud engineering roles</span></div>
       </aside>
     </main>
 
     <section id="about" class="grid">
       <div class="card panel about">
         <h2 class="sectionTitle">About</h2>
-        <p class="lead" style="font-size:16px;margin:0;">I build and support production infrastructure with a strong focus on automation, stability, and security. My background includes Linux and Windows administration, Terraform, Azure DevOps, GitHub Actions, Jenkins, Docker, Kubernetes, Prometheus, Grafana, and cloud networking. I like work that improves developer velocity while keeping systems observable and resilient.</p>
+        <p class="lead" style="font-size:16px;margin:0;">
+          I build and support production infrastructure with a strong focus on automation, stability, and security.
+          My background includes Linux administration, Terraform, Ansible, Jenkins, GitHub Actions, GitLab CI/CD, Docker, Kubernetes, Prometheus, CloudWatch, Azure Monitor, and cloud networking.
+          I like work that improves developer velocity while keeping systems observable and resilient.
+        </p>
       </div>
+
       <div id="skills" class="card panel skills">
         <h2 class="sectionTitle">Skills</h2>
         <div class="pillwrap">
-          <span class="pill">Python</span><span class="pill">Bash</span><span class="pill">PowerShell</span><span class="pill">Terraform</span><span class="pill">ARM Templates</span><span class="pill">Jenkins</span><span class="pill">Azure DevOps</span><span class="pill">GitHub Actions</span><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Prometheus</span><span class="pill">Grafana</span><span class="pill">Linux</span><span class="pill">Windows Server</span>
+          <span class="pill">Jenkins</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">GitLab CI/CD</span>
+          <span class="pill">Pipeline Optimization</span>
+          <span class="pill">AWS</span>
+          <span class="pill">Azure</span>
+          <span class="pill">Terraform</span>
+          <span class="pill">Ansible</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Kubernetes</span>
+          <span class="pill">Python</span>
+          <span class="pill">Bash</span>
+          <span class="pill">PowerShell</span>
+          <span class="pill">Java (basic)</span>
+          <span class="pill">Prometheus</span>
+          <span class="pill">CloudWatch</span>
+          <span class="pill">Azure Monitor</span>
+          <span class="pill">Linux</span>
+          <span class="pill">Networking</span>
+          <span class="pill">Security Groups</span>
+          <span class="pill">SDLC</span>
+          <span class="pill">Agile</span>
+          <span class="pill">Release Management</span>
+          <span class="pill">Troubleshooting</span>
+          <span class="pill">EC2</span>
+          <span class="pill">VPC</span>
+          <span class="pill">IAM</span>
+          <span class="pill">S3</span>
+          <span class="pill">ELB</span>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="card panel">
+    <section id="projects" class="card panel projects">
       <h2 class="sectionTitle">Projects</h2>
       <div class="projGrid">
-        <div class="proj"><h3>CI/CD Platform Buildout</h3><p>Designed delivery pipelines with testing, security scans, and gated deployments across dev, test, UAT, and production environments.</p></div>
-        <div class="proj"><h3>Hybrid Infrastructure Automation</h3><p>Provisioned cloud and hybrid environments using Terraform and ARM templates while reducing configuration drift and enforcing governance policies.</p></div>
-        <div class="proj"><h3>Monitoring and Incident Response</h3><p>Implemented monitoring with Prometheus, Grafana, Azure Monitor, and Log Analytics to improve detection and reduce resolution time.</p></div>
+        <div class="proj">
+          <h3>AWS 3-Tier Cloud Architecture</h3>
+          <p>Designed and deployed a production-style 3-tier AWS architecture with a custom VPC, segregated public/private subnets, ELB, EC2 across multiple Availability Zones, and Amazon Aurora with primary and read replicas.</p>
+        </div>
+        <div class="proj">
+          <h3>Cloud-Native Web App Deployment</h3>
+          <p>Containerized a full-stack Flask/Python application using Docker and orchestrated deployments on Kubernetes (Minikube), scaling to multiple frontend and backend replicas while validating connectivity and fault tolerance.</p>
+        </div>
+        <div class="proj">
+          <h3>CI/CD Delivery Workflow</h3>
+          <p>Built automated delivery workflows with testing, deployment, and environment promotion to reduce manual effort and support consistent cloud-native releases.</p>
+        </div>
       </div>
     </section>
 
-    <section id="experience" class="card panel">
+    <section id="experience" class="card panel exp">
       <h2 class="sectionTitle">Experience</h2>
+
       <div class="item">
-        <h3>Cloud Security & DevOps Engineer — Gravton Motors</h3>
-        <div class="meta">May 2022 — Oct 2023</div>
+        <h3>Jr. DevOps / Cloud Engineer — Gravton Motors</h3>
+        <div class="meta">May 2022 — Oct 2023 | Hyderabad, India</div>
         <ul>
-          <li>Cut release cycle time by 50% across 5+ applications by building end-to-end CI/CD pipelines in Azure DevOps and GitHub Actions.</li>
-          <li>Eliminated configuration drift across Linux and Windows servers by provisioning environments with Terraform and ARM templates.</li>
-          <li>Improved incident detection response time with observability tools across hybrid environments.</li>
+          <li>Designed and maintained CI/CD pipelines for cloud-native and microservices-based applications using Jenkins and Git workflows.</li>
+          <li>Automated build, test, and deployment processes, improving release efficiency and reducing manual errors.</li>
+          <li>Provisioned scalable AWS infrastructure using Terraform and Ansible, supporting high-availability application deployments.</li>
+          <li>Containerized applications using Docker and supported deployments in Kubernetes-based environments.</li>
+          <li>Integrated monitoring and logging with CloudWatch and Prometheus to improve observability and incident response.</li>
+          <li>Collaborated with development teams working on Java-based services to streamline build and deployment pipelines.</li>
+          <li>Ensured security, scalability, and reliability of cloud environments following DevOps best practices.</li>
         </ul>
       </div>
-      <div class="item">
-        <h3>Cloud Support Engineer — Marvelous Talks</h3>
-        <div class="meta">Jan 2021 — Jan 2022</div>
-        <ul>
-          <li>Reduced mean time to resolution for incidents involving Linux, Windows, IIS, and REST API integrations.</li>
-          <li>Improved access and connectivity troubleshooting through structured runbooks and documentation.</li>
-        </ul>
-      </div>
+
       <div class="item">
         <h3>Cloud Engineer Intern — N Lite Pvt Ltd</h3>
-        <div class="meta">Jan 2022 — Apr 2022</div>
+        <div class="meta">Jan 2022 — Apr 2022 | Visakhapatnam, India</div>
         <ul>
-          <li>Designed Azure foundations with VNets, subnets, NSGs, and Azure Firewall.</li>
-          <li>Improved visibility using Azure Monitor, Application Insights, and Log Analytics.</li>
+          <li>Assisted in building CI/CD pipelines for deploying applications in AWS environments.</li>
+          <li>Automated infrastructure and deployment workflows using Python and Bash scripting.</li>
+          <li>Supported troubleshooting of application deployments and pipeline failures in hybrid environments.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Cloud Support Engineer — Marvelous Talks</h3>
+        <div class="meta">Jan 2021 — Jan 2022 | Hyderabad, India</div>
+        <ul>
+          <li>Monitored cloud infrastructure and resolved incidents to maintain system uptime.</li>
+          <li>Assisted in deployment and migration of applications to cloud environments.</li>
+          <li>Documented operational processes and supported DevOps adoption across teams.</li>
         </ul>
       </div>
     </section>
 
-    <section id="edu" class="card panel">
+    <section id="edu" class="card panel edu">
       <h2 class="sectionTitle">Education and Certifications</h2>
       <div class="item">
-        <h3>M.S. in Information Technology — Clark University</h3>
-        <div class="meta">Jan 2024 — Dec 2025</div>
+        <h3>MS in Information Technology — Clark University</h3>
+        <div class="meta">Jan 2024 — Dec 2025 | GPA: 3.81 / 4.0</div>
       </div>
       <div class="item">
-        <h3>B.S. in Information Technology — GMR Institute of Technology</h3>
+        <h3>Bachelor of Technology, Information Technology — GMR Institute of Technology</h3>
         <div class="meta">India</div>
       </div>
       <div class="item">
         <h3>Certifications</h3>
-        <div class="meta">AWS Certified Developer — Associate • Microsoft Azure Administrator</div>
+        <div class="meta">
+          AWS Certified DevOps Engineer – Professional • Microsoft Certified: Azure Administrator (AZ-104) • Microsoft Certified: Azure Fundamentals (AZ-900) • Verizon Cloud Platform Virtual Experience
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="card panel">
+    <section id="contact" class="card panel cert">
       <h2 class="sectionTitle">Contact</h2>
-      <p class="lead" style="font-size:16px;margin:0 0 12px;">Email: saikurra982@gmail.com • Phone: 774-525-7452 • LinkedIn: linkedin.com/in/saikurra01</p>
-      <p class="lead" style="font-size:16px;margin:0;">To publish this, upload the file to GitHub Pages or Netlify after replacing any placeholder links with your live profile links.</p>
+      <p class="lead" style="font-size:16px;margin:0 0 12px;">
+        Email: <a href="mailto:saikurra982@gmail.com">saikurra982@gmail.com</a> • Phone: 774-525-7452 •
+        LinkedIn: <a href="https://www.linkedin.com/in/saikurra01/" target="_blank" rel="noreferrer">linkedin.com/in/saikurra01</a> •
+        Portfolio: <a href="https://saikurra18.github.io/portfolio/" target="_blank" rel="noreferrer">saikurra18.github.io/portfolio</a>
+      </p>
+      <p class="lead" style="font-size:16px;margin:0;">
+        Location: San Francisco, CA.
+      </p>
     </section>
 
     <div class="footer">© 2026 Sai Kurra • DevOps Engineer Portfolio</div>
